@@ -65,6 +65,7 @@ function renderApp(): void {
           <a href="#about" class="nav-link">About</a>
           <a href="#education" class="nav-link">Education</a>
           <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
           <a href="#profiles" class="nav-link">Profiles</a>
           <a href="#contact" class="nav-link">Contact</a>
         </nav>
@@ -94,6 +95,7 @@ function renderApp(): void {
       <a href="#about" class="nav-link mobile-link">About</a>
       <a href="#education" class="nav-link mobile-link">Education</a>
       <a href="#skills" class="nav-link mobile-link">Skills</a>
+      <a href="#projects" class="nav-link mobile-link">Projects</a>
       <a href="#profiles" class="nav-link mobile-link">Profiles</a>
       <a href="#contact" class="nav-link mobile-link">Contact</a>
       <div style="margin-top: 20px;">
@@ -326,10 +328,289 @@ function renderApp(): void {
         </div>
       </section>
 
-      <!-- Section Transition Divider -->
-      <div class="section-divider"></div>
+      <!-- Animated Gradient Divider Above Projects -->
+      <div class="projects-divider-glow"></div>
 
-      <!-- 5. CODING PROFILES & HIGHLIGHTED LINKS -->
+      <!-- 5. FEATURED PROJECTS SECTION -->
+      <section class="section projects-section" id="projects">
+        <!-- Ambient Moving Golden Caramel & Amber Gradient Blobs -->
+        <div class="projects-ambient-blob projects-blob-caramel" aria-hidden="true"></div>
+        <div class="projects-ambient-blob projects-blob-amber" aria-hidden="true"></div>
+
+        <div class="container projects-container">
+          <!-- Staggered Scroll Reveal Header -->
+          <div class="section-header reveal">
+            <span class="section-badge highlight-bangers">PORTFOLIO SHOWCASE</span>
+            <h2 class="section-title headline-font">FEATURED <span class="truffle-gradient-text">PROJECTS</span></h2>
+            <p class="section-subtitle">
+              Academic projects and problem-solving work developed throughout my Computer Science learning journey.
+            </p>
+          </div>
+
+          <!-- Responsive 3-Card Grid -->
+          <div class="projects-grid">
+            <!-- ================= PROJECT 1 ================= -->
+            <div class="project-card reveal delay-1" data-cursor-text="EXPLORE">
+              <!-- Category Badge -->
+              <div class="project-top-bar">
+                <span class="project-category-badge highlight-bangers">
+                  <span class="category-dot"></span>
+                  Academic Project
+                </span>
+                <span class="project-status-pill">Concept &amp; Architecture</span>
+              </div>
+
+              <!-- Project Visual Preview -->
+              <div class="project-visual-wrapper">
+                <div class="project-visual-overlay"></div>
+                <div class="project-visual-content">
+                  <!-- Healthcare Digital Dashboard Visual -->
+                  <div class="healthcare-visual-mockup">
+                    <div class="mockup-header">
+                      <div class="mockup-dots">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <span class="mockup-title">SmartHospital // Core Telemetry</span>
+                      <span class="mockup-live-badge"><span class="pulse-ring"></span> LIVE SYNC</span>
+                    </div>
+
+                    <div class="mockup-body">
+                      <div class="mockup-stat-row">
+                        <div class="mockup-metric-card">
+                          <span class="metric-lbl">Queue Prediction</span>
+                          <span class="metric-val caramel-text">-42% Wait</span>
+                        </div>
+                        <div class="mockup-metric-card">
+                          <span class="metric-lbl">Digital EHR Status</span>
+                          <span class="metric-val gold-text">100% Synced</span>
+                        </div>
+                      </div>
+
+                      <!-- Animated ECG / Pulse Line -->
+                      <div class="mockup-ecg-track">
+                        <svg class="ecg-svg" viewBox="0 0 300 45" fill="none" preserveAspectRatio="none">
+                          <path d="M0,22 L60,22 L75,5 L85,40 L95,12 L105,28 L115,22 L170,22 L185,2 L195,42 L205,10 L215,30 L225,22 L300,22" stroke="url(#ecgTruffleGradient)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <defs>
+                            <linearGradient id="ecgTruffleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                              <stop offset="0%" stop-color="#f59e0b"/>
+                              <stop offset="50%" stop-color="#fbbf24"/>
+                              <stop offset="100%" stop-color="#e5a96a"/>
+                            </linearGradient>
+                          </defs>
+                        </svg>
+                      </div>
+
+                      <div class="mockup-footer-tags">
+                        <span>● Digital Records</span>
+                        <span>● Queue Dispatch</span>
+                        <span>● Doctor-Patient Sync</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Info & Typography -->
+              <div class="project-info">
+                <h3 class="project-title headline-font">Smart Hospital Management System</h3>
+                <p class="project-description">
+                  A smart healthcare management concept designed to improve the hospital experience through digital patient records, queue management, waiting-time prediction, and better coordination between patients and doctors.
+                </p>
+
+                <!-- Technology Badges -->
+                <div class="project-tech-badges">
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Design Thinking</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>UI/UX</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Digital Health</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>System Design</span>
+                </div>
+
+                <!-- Action Buttons: LinkedIn Post Link (Single Prominent Action) -->
+                <div class="project-actions">
+                  <a href="https://lnkd.in/p/gN5bZsBH" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary shine-btn" style="width: 100%;">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    <span>View LinkedIn Post</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= PROJECT 2 ================= -->
+            <div class="project-card reveal delay-2" data-cursor-text="SOLUTIONS">
+              <!-- Category Badge -->
+              <div class="project-top-bar">
+                <span class="project-category-badge highlight-bangers">
+                  <span class="category-dot"></span>
+                  Problem Solving
+                </span>
+                <span class="project-status-pill">C Programming</span>
+              </div>
+
+              <!-- Project Visual Preview -->
+              <div class="project-visual-wrapper">
+                <div class="project-visual-overlay"></div>
+                <div class="project-visual-content">
+                  <!-- Algorithmic Terminal & Visual Code Editor -->
+                  <div class="code-visual-mockup">
+                    <div class="mockup-header">
+                      <div class="mockup-dots">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <span class="mockup-title">leetcode_c // solution.c</span>
+                      <span class="mockup-lang-tag highlight-bangers">C / DSA</span>
+                    </div>
+
+                    <div class="mockup-code-lines">
+                      <div class="code-line"><span class="token-keyword">int</span>* <span class="token-func">twoSum</span>(<span class="token-keyword">int</span>* nums, <span class="token-keyword">int</span> n, <span class="token-keyword">int</span> target) {</div>
+                      <div class="code-line indent"><span class="token-keyword">for</span> (<span class="token-keyword">int</span> i = <span class="token-num">0</span>; i &lt; n; i++) {</div>
+                      <div class="code-line double-indent"><span class="token-keyword">int</span> comp = target - nums[i];</div>
+                      <div class="code-line double-indent"><span class="token-comment">// Fast two-pointer / hash lookup</span></div>
+                      <div class="code-line double-indent"><span class="token-keyword">return</span> resultIndex;</div>
+                      <div class="code-line">}</div>
+                    </div>
+
+                    <!-- Visual Highlighted Problem Snippet Badges -->
+                    <div class="mockup-examples-row">
+                      <span class="example-chip">Two Sum</span>
+                      <span class="example-chip">Reverse String</span>
+                      <span class="example-chip">Binary Search</span>
+                      <span class="example-chip">Valid Parentheses</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Info & Typography -->
+              <div class="project-info">
+                <h3 class="project-title headline-font">LeetCode Solutions Portfolio</h3>
+                <p class="project-description">
+                  A personal collection of programming problems solved using C while developing algorithmic thinking, problem-solving skills, and understanding of fundamental data structures and algorithms.
+                </p>
+
+                <!-- Visually Mentioned Solved Problems -->
+                <div class="solved-examples-container">
+                  <span class="examples-label highlight-bangers">FEATURED PROBLEMS SOLVED:</span>
+                  <div class="solved-pills-wrap">
+                    <span class="solved-pill">Two Sum</span>
+                    <span class="solved-pill">Reverse a String</span>
+                    <span class="solved-pill">Valid Anagram</span>
+                    <span class="solved-pill">Binary Search</span>
+                    <span class="solved-pill">Move Zeroes</span>
+                    <span class="solved-pill">Valid Parentheses</span>
+                  </div>
+                </div>
+
+                <!-- Technology Badges -->
+                <div class="project-tech-badges">
+                  <span class="project-tech-badge"><span class="tech-dot"></span>C</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Arrays</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Strings</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Searching</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Algorithms</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Data Structures</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-actions">
+                  <a href="https://leetcode.com/u/Basavaraj_33/" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary shine-btn">
+                    <span>View Solutions</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                  <a href="https://github.com/Basavaraj-2007-k" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= PROJECT 3 ================= -->
+            <div class="project-card reveal delay-3" data-cursor-text="ANALYSIS">
+              <!-- Category Badge -->
+              <div class="project-top-bar">
+                <span class="project-category-badge highlight-bangers">
+                  <span class="category-dot"></span>
+                  Problem Solving
+                </span>
+                <span class="project-status-pill">Complexity &amp; Logic</span>
+              </div>
+
+              <!-- Project Visual Preview -->
+              <div class="project-visual-wrapper">
+                <div class="project-visual-overlay"></div>
+                <div class="project-visual-content">
+                  <!-- Algorithm Complexity & Benchmark Visual -->
+                  <div class="complexity-visual-mockup">
+                    <div class="mockup-header">
+                      <div class="mockup-dots">
+                        <span></span><span></span><span></span>
+                      </div>
+                      <span class="mockup-title">hackerrank // complexity_audit</span>
+                      <span class="mockup-verified highlight-bangers">OPTIMAL</span>
+                    </div>
+
+                    <div class="complexity-cards-grid">
+                      <div class="comp-box">
+                        <span class="comp-lbl">Time Complexity</span>
+                        <span class="comp-val caramel-text">O(N log N)</span>
+                        <span class="comp-sub">Efficient Divide &amp; Conquer</span>
+                      </div>
+                      <div class="comp-box">
+                        <span class="comp-lbl">Space Complexity</span>
+                        <span class="comp-val gold-text">O(1) Auxiliary</span>
+                        <span class="comp-sub">In-place Memory Bound</span>
+                      </div>
+                    </div>
+
+                    <!-- Flow Diagram Track -->
+                    <div class="algorithm-flow-bar">
+                      <span class="flow-step">Input Stream</span>
+                      <span class="flow-arrow">→</span>
+                      <span class="flow-step active-step">C Algorithm</span>
+                      <span class="flow-arrow">→</span>
+                      <span class="flow-step">Optimized Output</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Info & Typography -->
+              <div class="project-info">
+                <h3 class="project-title headline-font">HackerRank Problem-Solving Portfolio</h3>
+                <p class="project-description">
+                  A curated collection of HackerRank problems solved in C as part of my algorithmic problem-solving practice, with documentation of time and space complexity.
+                </p>
+
+                <!-- Technology Badges -->
+                <div class="project-tech-badges" style="margin-top: 24px;">
+                  <span class="project-tech-badge"><span class="tech-dot"></span>C</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Algorithms</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Problem Solving</span>
+                  <span class="project-tech-badge"><span class="tech-dot"></span>Complexity Analysis</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="project-actions">
+                  <a href="https://github.com/Basavaraj-2007-k" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-primary shine-btn">
+                    <span>View Solutions</span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  </a>
+                  <a href="https://github.com/Basavaraj-2007-k" target="_blank" rel="noopener noreferrer" class="project-btn project-btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Transition Divider Below Projects -->
+      <div class="projects-divider-subtle"></div>
+
+      <!-- 6. CODING PROFILES & HIGHLIGHTED LINKS -->
       <section class="section" id="profiles">
         <div class="container">
           <div class="section-header reveal">
@@ -851,7 +1132,7 @@ function initTypingAnimation(): void {
    3D Card Tilt on Hover
    ========================================================================== */
 function initCardTilt(): void {
-  const cards = document.querySelectorAll<HTMLElement>('.skill-card, .profile-link-card, .edu-card');
+  const cards = document.querySelectorAll<HTMLElement>('.skill-card, .profile-link-card, .edu-card, .project-card');
 
   cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
