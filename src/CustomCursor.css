@@ -1,0 +1,125 @@
+/* ==========================================================================
+   CustomCursor.css - Premium Smooth Trailing Cursor System
+   ========================================================================== */
+
+/* 1. Inner Cursor (Instant Follower Glowing Dot) */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: -3.5px;
+  margin-left: -3.5px;
+  background: #ffffff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  box-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255, 255, 255, 0.5);
+  transition:
+    width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    margin 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.25s ease,
+    background-color 0.25s ease;
+  will-change: transform;
+}
+
+/* Inner dot shrinks slightly when hovering interactive targets */
+.custom-cursor.cursor-active {
+  width: 4px;
+  height: 4px;
+  margin-top: -2px;
+  margin-left: -2px;
+  opacity: 0.85;
+}
+
+/* 2. Outer Trailing Cursor (Smooth Lerp Follower) */
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 38px;
+  height: 38px;
+  margin-top: -19px;
+  margin-left: -19px;
+  border: 1.5px solid rgba(229, 169, 106, 0.55);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  background: rgba(229, 169, 106, 0.04);
+  box-shadow: 0 0 16px rgba(229, 169, 106, 0.15);
+  transition:
+    width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    margin 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+/* Hover Expansion: Expands smoothly from ~38px to 78px */
+.cursor-follower.cursor-expand {
+  width: 78px;
+  height: 78px;
+  margin-top: -39px;
+  margin-left: -39px;
+  background: rgba(229, 169, 106, 0.14);
+  border-color: rgba(245, 158, 11, 0.85);
+  box-shadow:
+    0 0 24px rgba(229, 169, 106, 0.4),
+    0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+/* Card / Project Hover: Text Badge Display */
+.cursor-follower.cursor-view {
+  width: 86px;
+  height: 86px;
+  margin-top: -43px;
+  margin-left: -43px;
+  background: rgba(28, 17, 11, 0.85);
+  border: 1.5px solid #f59e0b;
+  box-shadow:
+    0 0 30px rgba(245, 158, 11, 0.5),
+    0 0 60px rgba(229, 169, 106, 0.25);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cursor-follower .cursor-label {
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(245, 158, 11, 0.8);
+  opacity: 0;
+  transform: scale(0.6);
+  animation: cursorLabelPop 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes cursorLabelPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 3. Automatic Disabling on Touch / Mobile Devices */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
